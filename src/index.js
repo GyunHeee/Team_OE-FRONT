@@ -3,11 +3,27 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import NotFoundView from './pages/NotFoundView';
+import HomeView from './pages/HomeView';
+import PostView from './pages/PostView';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <App />,
+    errorElement: <NotFoundView />,
+    children: [
+      { index: true, path: '/', element: <HomeView /> },
+      { path: '/borad/:board_id', element: <PostView /> },
+    ],
+  },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 

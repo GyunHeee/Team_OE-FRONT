@@ -1,0 +1,182 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.title__container {
+  margin: 0.5rem 0.8rem;
+}
+
+.title {
+  width: 214px;
+  height: 34px;
+  width: 100%;
+}
+
+.post_info {
+  font-family: Pretendard;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: -0.5px;
+  text-align: left;
+  color: #9e9e9e;
+}
+
+.userName {
+  font-family: Pretendard;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: -0.5px;
+  text-align: left;
+}
+
+.userImg {
+  background: url('../../public/mock/profile.png');
+  background-size: cover;
+  border-radius: 100%;
+  margin-right: 0.3rem;
+  width: 40px;
+  height: 40px;
+}
+
+.user__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user__box {
+  display: flex;
+}
+
+.user__btn {
+  border: none;
+  background: none;
+  font-family: Pretendard;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: -0.5px;
+  text-align: left;
+}
+
+.content__box {
+  margin: 0.5rem 0.8rem;
+}
+
+.like__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.likeBtn {
+  background: url('../../public/icons/likeButton.png');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+}
+
+.like__box {
+  display: flex;
+}
+
+.likeText {
+  font-family: Pretendard;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: -0.5px;
+  margin-right: 0.2rem;
+}
+
+.likeCnt {
+  font-family: Pretendard;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: -0.5px;
+  color: #0085ff;
+  margin-left: 0.2rem;
+}
+
+.comment__container {
+  border-top: 2px solid #eeeeee;
+  margin: 0.5rem 0.8rem;
+}
+
+.comment__box {
+  display: flex;
+  align-items: center;
+}
+
+.comment {
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 600;
+
+  margin-right: 0.3rem;
+}
+
+.commentCnt {
+  font-family: Pretendard;
+  font-size: 14px;
+  font-weight: 400;
+  color: #bdbdbd;
+}
+
+.user__comment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+}
+
+.comment__img {
+  background: url('../../public/mock/commentUser.png');
+  background-size: cover;
+  width: 32px;
+  height: 32px;
+}
+
+.comment__name {
+  font-family: Pretendard;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: -0.5px;
+  text-align: left;
+  margin: 0;
+}
+
+.comment__content {
+  font-family: Pretendard;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: -0.5px;
+  text-align: left;
+  margin: 0.1rem;
+}
+
+.userInfo__box {
+  margin-left: 0.4rem;
+}
+
+.deleteBtn {
+  background: url('../../public/icons/deleteBtn.png');
+  background-size: cover;
+  width: 24px;
+  height: 24px;
+}
+
+@media only screen and (max-width: 600px) {
+  .title {
+    width: 100%; /* 모바일 화면에 맞게 너비 조절 */
+  }
+}

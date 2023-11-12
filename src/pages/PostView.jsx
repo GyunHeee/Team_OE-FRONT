@@ -194,7 +194,7 @@ export default function PostView() {
             <UserImg></UserImg>
             <UserName>나라사랑</UserName>
           </UserBox>
-          <UserBtn>작성글 더보기 ></UserBtn>
+          <UserBtn>작성글 더보기</UserBtn>
         </UserContainer>
       </TitleContainer>
 

@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import NotFoundView from './pages/NotFoundView';
 import HomeView from './pages/HomeView';
 import PostView from './pages/PostView';
+import PostListView from './pages/PostListView';
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, path: '/', element: <HomeView /> },
       { path: '/board/:board_id', element: <PostView /> },
+      { path: '/boardList', element: <PostListView /> },
     ],
   },
 ]);

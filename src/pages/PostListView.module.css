@@ -1,0 +1,184 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.banner__container {
+  display: flex;
+  justify-content: center;
+  background: url('../../public/mock/hotBanner.png');
+  background-size: cover;
+  align-items: center;
+}
+
+.banner__hot {
+  padding: 8px;
+  border-radius: 10px;
+  gap: 4px;
+  background-color: #ffffff;
+
+  font-family: Pretendard;
+  font-size: 12px;
+  font-weight: 600;
+  color: #ff0000;
+  margin-right: 0.3rem;
+}
+
+.banner__title {
+  font-family: Pretendard;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -0.5px;
+  text-align: left;
+
+  color: #ffffff;
+
+  margin-left: 0.3rem;
+}
+
+.filter__box {
+  margin: 1rem;
+}
+
+.unChecked {
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  text-align: left;
+
+  padding: 0.5rem 0.8rem;
+}
+
+.checked {
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  text-align: left;
+  padding: 0.5rem 0.8rem;
+
+  color: #0085ff;
+  border-bottom: 2px solid #0085ff;
+}
+
+.timeSort__box {
+  margin: 0 0.7rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.unRecommended {
+  font-family: Pretendard;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  text-align: center;
+  padding: 0.6rem 0.7rem;
+  background-color: #eeeeee;
+  margin: 0.3rem;
+  border-radius: 0.5rem;
+}
+
+.recommended {
+  font-family: Pretendard;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  text-align: center;
+  padding: 0.6rem 0.7rem;
+  background: #0085ff;
+  margin: 0.3rem;
+  color: white;
+  border-radius: 0.5rem;
+}
+
+.post__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 1rem;
+}
+
+.post__title {
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.5px;
+  text-align: left;
+  margin: 0;
+}
+
+.postInfo {
+  font-family: Pretendard;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: -0.5px;
+  text-align: left;
+
+  margin: 0;
+  color: #bdbdbd;
+}
+
+.postImg {
+  background: url('../../public/mock/postImg.png');
+  background-size: cover;
+  width: 60px;
+  height: 60px;
+}
+
+.postInfo__container {
+  display: flex;
+}
+
+.like__container {
+  display: flex;
+  align-items: center;
+}
+
+.postLike {
+  background: url('../../public/icons/like.png');
+  background-size: cover;
+  width: 24px;
+  height: 24px;
+  margin-right: 0.2rem;
+}
+
+.likeCnt {
+  font-family: Pretendard;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: -0.5px;
+  text-align: left;
+
+  padding-right: 1rem;
+  border-right: 2px solid #e0e0e0;
+}
+
+.comment__container {
+  display: flex;
+  align-items: center;
+  margin-left: 1.3rem;
+}
+
+.commentIcon {
+  background: url('../../public/icons/comment.png');
+  background-size: cover;
+  width: 21px;
+  height: 19.38px;
+  margin-right: 0.2rem;
+}
+
+.commentCnt {
+  font-family: Pretendard;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: -0.5px;
+  text-align: left;
+}

@@ -15,7 +15,7 @@ const router = createBrowserRouter([
     errorElement: <NotFoundView />,
     children: [
       { index: true, path: '/', element: <HomeView /> },
-      { path: '/borad/:board_id', element: <PostView /> },
+      { path: '/board/:board_id', element: <PostView /> },
     ],
   },
 ]);

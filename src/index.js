@@ -9,6 +9,8 @@ import HomeView from './pages/HomeView';
 import PostView from './pages/PostView';
 import PostListView from './pages/PostListView';
 import AlertView from './pages/user/AlertView';
+import LoginView from './pages/auth/LoginView';
+import AddPostView from './pages/user/AddPostView';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +22,8 @@ const router = createBrowserRouter([
       { path: '/board/:board_id', element: <PostView /> },
       { path: '/boardList', element: <PostListView /> },
       { path: '/alert/:user_id', element: <AlertView /> },
+      { path: '/login', element: <LoginView /> },
+      { path: '/addPost', element: <AddPostView /> },
     ],
   },
 ]);

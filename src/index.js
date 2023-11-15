@@ -10,6 +10,7 @@ import PostView from './pages/PostView';
 import PostListView from './pages/PostListView';
 import LoginView from './pages/auth/LoginView';
 import KaKaoLogin from './pages/auth/KaKaoLogin';
+import SetName from './pages/auth/SetName';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
       { path: '/boardList', element: <PostListView /> },
       { path: '/login', element: <LoginView /> },
       { path: '/login/kakao', element: <KaKaoLogin /> },
+      { path: '/login/set-name', element: <SetName /> },
     ],
   },
 ]);

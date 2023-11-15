@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.alertBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0.5rem;
+  padding: 0.7rem 0.5rem;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.alertImg {
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  border-radius: 100%;
+}
+
+.alertUser {
+  font-weight: 600;
+}
+
+.alertType {
+  font-weight: 600;
+  color: #0085ff;
+}
+
+.alertText {
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.5px;
+  text-align: left;
+
+  margin-left: 0.5rem;
+}

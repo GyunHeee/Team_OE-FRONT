@@ -8,6 +8,10 @@ import NotFoundView from './pages/NotFoundView';
 import HomeView from './pages/HomeView';
 import PostView from './pages/PostView';
 import PostListView from './pages/PostListView';
+import LoginView from './pages/auth/LoginView';
+import KaKaoLogin from './pages/auth/KaKaoLogin';
+import SetName from './pages/auth/SetName';
+import SetTel from './pages/auth/SetTel';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +22,10 @@ const router = createBrowserRouter([
       { index: true, path: '/', element: <HomeView /> },
       { path: '/board/:board_id', element: <PostView /> },
       { path: '/boardList', element: <PostListView /> },
+      { path: '/login', element: <LoginView /> },
+      { path: '/login/kakao', element: <KaKaoLogin /> },
+      { path: '/login/set-name', element: <SetName /> },
+      { path: '/login/set-tel', element: <SetTel /> },
     ],
   },
 ]);

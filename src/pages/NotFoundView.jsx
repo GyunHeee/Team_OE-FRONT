@@ -1,12 +1,14 @@
 import React from 'react';
 import BottomNav from '../components/BottomNav';
+import { useLocation } from 'react-router-dom';
 
 export default function NotFoundView() {
+  const pathname = useLocation().pathname;
+
   return (
     <>
       <div>Not found</div>
-
-      <BottomNav />
+      {pathname.startsWith('/login') || <BottomNav />}
     </>
   );
 }

@@ -6,17 +6,17 @@ const items = [
   {
     href: '/map',
     label: '지도',
-    icon: '/mock/nav_map.svg',
+    icon: '/icons/nav_map.svg',
   },
   {
     href: '/boardList',
     label: '게시판',
-    icon: '/mock/nav_board.svg',
+    icon: '/icons/nav_board.svg',
   },
   {
     href: '/profile',
     label: '내정보',
-    icon: '/mock/nav_profile.svg',
+    icon: '/icons/nav_profile.svg',
   },
 ];
 

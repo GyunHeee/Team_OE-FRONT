@@ -58,6 +58,7 @@ const TimeSortBox = styled.div`
   margin: 0 0.7rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 `;
 
 const UnRecommendedButton = styled.button`
@@ -76,14 +77,57 @@ const UnRecommendedButton = styled.button`
   }
 `;
 
-const SelectContainer = styled.div`
-  select {
-    font-family: Pretendard;
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: -0.5px;
-    text-align: left;
-    padding: 0.5rem 0.8rem;
+const DropdownContainer = styled.div`
+  position: relative;
+  display: inline-block;
+`;
+
+const DropdownButton = styled.button`
+  font-family: Pretendard;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  text-align: left;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid #eeeeee;
+  border-radius: 10px 10px 0 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 80px;
+`;
+
+const DropdownContent = styled.ul`
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #eeeeee;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: ${(props) => (props.isOpen ? 'block' : 'none')};
+  z-index: 1;
+`;
+const DropdownItem = styled.li`
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+
+  font-family: Pretendard;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  text-align: left;
+  padding: 0.5rem 0.8rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 80px;
+
+  &:hover {
+    background-color: #f9f9f9;
   }
 `;
 
@@ -176,6 +220,18 @@ const CommentCnt = styled.p`
 const PostListView = () => {
   const [isHot, setIsHot] = useState(false);
   const [isRecommend, setIsRecommend] = useState(true);
+  const [selectedCategory, setSelectedCategory] = useState('전체');
+  const categories = ['전체', '자연재해', '시위', '축제'];
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleCategoryChange = (category) => {
+    setSelectedCategory(category);
+    setIsOpen(false);
+  };
+
+  const handleDropdownToggle = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <Container>
@@ -212,16 +268,21 @@ const PostListView = () => {
             최신순
           </UnRecommendedButton>
         </div>
-        <SelectContainer>
-          <select name="" id="">
-            <option value="전체" disabled selected>
-              전체
-            </option>
-            <option value="자연재해">자연재해</option>
-            <option value="시위">시위</option>
-            <option value="축제">축제</option>
-          </select>
-        </SelectContainer>
+        <DropdownContainer>
+          <DropdownButton onClick={handleDropdownToggle}>
+            {selectedCategory} ⌃
+          </DropdownButton>
+          <DropdownContent isOpen={isOpen}>
+            {categories.map((category) => (
+              <DropdownItem
+                key={category}
+                onClick={() => handleCategoryChange(category)}
+              >
+                {category}
+              </DropdownItem>
+            ))}
+          </DropdownContent>
+        </DropdownContainer>
       </TimeSortBox>
       <PostContainer>
         <div>

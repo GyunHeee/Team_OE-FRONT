@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { kakaoAuthUrl } from '../../lib/handleOAuth';
 
 const items = [
   {
@@ -8,7 +9,7 @@ const items = [
     icon: 'icons/icon_naver.svg',
   },
   {
-    href: '/login/kakao',
+    href: kakaoAuthUrl,
     label: '카카오',
     icon: '/icons/icon_kakao.svg',
   },

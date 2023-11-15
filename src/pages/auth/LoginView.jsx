@@ -66,7 +66,7 @@ const AuthItem = styled(Link)`
   padding-right: 24px;
 `;
 
-const ButtonLater = styled.button`
+const ButtonLater = styled(Link)`
   margin-top: 24px;
   cursor: pointer;
   text-decoration-line: underline;
@@ -92,7 +92,7 @@ export default function LoginView() {
         ))}
       </AuthList>
 
-      <ButtonLater>나중에</ButtonLater>
+      <ButtonLater to="/">나중에</ButtonLater>
     </Container>
   );
 }

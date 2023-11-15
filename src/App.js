@@ -8,7 +8,9 @@ function App() {
 
   return (
     <>
-      <Outlet />
+      <div className="content">
+        <Outlet />
+      </div>
       {pathname.startsWith('/login') || <BottomNav />}
     </>
   );

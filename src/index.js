@@ -8,6 +8,7 @@ import NotFoundView from './pages/NotFoundView';
 import HomeView from './pages/HomeView';
 import PostView from './pages/PostView';
 import PostListView from './pages/PostListView';
+import LoginView from './pages/LoginView';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
       { index: true, path: '/', element: <HomeView /> },
       { path: '/board/:board_id', element: <PostView /> },
       { path: '/boardList', element: <PostListView /> },
+      { path: '/login', element: <LoginView /> },
     ],
   },
 ]);

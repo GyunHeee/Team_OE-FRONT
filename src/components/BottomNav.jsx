@@ -20,6 +20,11 @@ const items = [
   },
 ];
 
+const PreventOverflow = styled.div`
+  height: 49px;
+  width: 100%;
+`;
+
 const NavContainer = styled.nav`
   display: flex;
   position: fixed;
@@ -29,6 +34,7 @@ const NavContainer = styled.nav`
   font-size: 12px;
   font-weight: 600;
   box-shadow: 0px 15px 30px 30px rgb(0 0 0 / 0.05);
+  background-color: white;
 `;
 
 const NavList = styled.ul`
@@ -75,6 +81,7 @@ export default function BottomNav() {
 
   return (
     <>
+      <PreventOverflow />
       <NavContainer>
         <NavList>
           {items.map((item) =>

@@ -10,6 +10,11 @@ import PostView from './pages/PostView';
 import PostListView from './pages/PostListView';
 import AlertView from './pages/user/AlertView';
 import LoginView from './pages/auth/LoginView';
+import KaKaoLogin from './pages/auth/KaKaoLogin';
+import SetName from './pages/auth/SetName';
+import SetLoc from './pages/auth/SetLoc';
+import ProfileView from './pages/profile/ProfileView';
+import ProfileModifyView from './pages/profile/ProfileModifyView';
 import AddPostView from './pages/user/AddPostView';
 
 const router = createBrowserRouter([
@@ -23,6 +28,11 @@ const router = createBrowserRouter([
       { path: '/boardList', element: <PostListView /> },
       { path: '/alert/:user_id', element: <AlertView /> },
       { path: '/login', element: <LoginView /> },
+      { path: '/login/kakao', element: <KaKaoLogin /> },
+      { path: '/login/set-name', element: <SetName /> },
+      { path: '/login/set-loc', element: <SetLoc /> },
+      { path: '/profile', element: <ProfileView /> },
+      { path: '/profile/modify', element: <ProfileModifyView /> },
       { path: '/addPost', element: <AddPostView /> },
     ],
   },

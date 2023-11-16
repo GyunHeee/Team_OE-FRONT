@@ -3,41 +3,42 @@ import Header from './components/Header';
 import Form from './components/Form';
 import Label from './components/Label';
 import Input from './components/Input';
+import SkipButton from './components/SkipButton';
 import ButtonContainer from './components/ButtonContainer';
 import { useState, useCallback } from 'react';
 
-export default function SetName() {
-  const [name, setName] = useState('');
+export default function SetLoc() {
+  const [loc, setLoc] = useState('');
 
   const onChange = useCallback((e) => {
-    setName(e.currentTarget.value);
-  }, []);
-
-  const checkLength = useCallback((string) => {
-    if (string.length > 0 && string.length <= 30) return false;
-    else return true;
+    setLoc(e.currentTarget.value);
   }, []);
 
   const onClick = useCallback(() => {
-    setName('');
+    setLoc('');
   }, []);
 
   return (
     <Container>
-      <Header title="닉네임" description="닉네임을 입력해주세요." />
+      <Header
+        title="위치"
+        description="위치를 설정해주세요. 해당지역의 사건사고를 빠르게 알려드립니다!"
+      />
 
       <Form>
-        <Label label="닉네임" description="1~30자 이내" stress="(필수)" />
+        <Label label="위치설정" description="" stress="" />
 
         <Input
-          value={name}
+          value={loc}
           onChange={onChange}
           type="text"
-          loc={false}
+          loc={true}
           onClick={onClick}
         />
 
-        <ButtonContainer prev={false} disable={checkLength(name)} />
+        <ButtonContainer prev={true} disable={false} />
+
+        <SkipButton />
       </Form>
     </Container>
   );

@@ -8,13 +8,16 @@ const Title = styled.h1`
   margin-bottom: 16px;
   padding-bottom: 14px;
   border-bottom: 2px solid black;
-  width: 90px;
+  padding-left: 14px;
+  padding-right: 14px;
 `;
 
 const Description = styled.div`
+  text-align: center;
   font-weight: 400;
   font-size: 16px;
   margin-bottom: 90px;
+  width: 268px;
 `;
 
 export default function Header({ title, description }) {

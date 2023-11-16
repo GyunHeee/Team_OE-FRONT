@@ -27,8 +27,7 @@ const PreventOverflow = styled.div`
 
 const NavContainer = styled.nav`
   display: flex;
-  position: fixed;
-  bottom: 0;
+
   width: 100%;
   height: 49px;
   font-size: 12px;

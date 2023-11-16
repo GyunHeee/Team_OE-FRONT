@@ -34,8 +34,10 @@ const PrevButtonComponent = styled.button`
 export default function ButtonContainer({ prev, disable }) {
   return (
     <ButtonContainerComponent>
-      {prev && <PrevButtonComponent>이전</PrevButtonComponent>}
-      <NextButtonComponent disabled={disable}>다음</NextButtonComponent>
+      {prev && <PrevButtonComponent type="button">이전</PrevButtonComponent>}
+      <NextButtonComponent disabled={disable} type="button">
+        다음
+      </NextButtonComponent>
     </ButtonContainerComponent>
   );
 }

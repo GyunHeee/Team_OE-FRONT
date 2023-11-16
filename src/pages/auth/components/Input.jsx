@@ -13,7 +13,7 @@ const InputComponent = styled.input`
   margin-bottom: 60px;
   font-weight: 600;
   font-size: 16px;
-  padding: 4px;
+  padding: 4px 32px 4px 30px;
 `;
 
 const CancelButton = styled.button`
@@ -23,11 +23,28 @@ const CancelButton = styled.button`
   cursor: pointer;
 `;
 
-export default function Input() {
+const LocationButton = styled.button`
+  position: absolute;
+  top: 27px;
+  left: 0;
+  cursor: pointer;
+`;
+
+export default function Input({ value, onChange, type, onClick, loc }) {
   return (
     <InputContainer>
-      <InputComponent type="text" id="input" />
-      <CancelButton type="button">
+      {loc && (
+        <LocationButton>
+          <img src="/icons/icon_location.svg" alt="장소" />
+        </LocationButton>
+      )}
+      <InputComponent
+        type={type}
+        id="input"
+        value={value}
+        onChange={onChange}
+      />
+      <CancelButton type="button" onClick={onClick}>
         <img src="/icons/btn_cancel.svg" alt="취소" />
       </CancelButton>
     </InputContainer>

@@ -5,8 +5,19 @@ import Label from './components/Label';
 import Input from './components/Input';
 import SkipButton from './components/SkipButton';
 import ButtonContainer from './components/ButtonContainer';
+import { useState, useCallback } from 'react';
 
 export default function SetLoc() {
+  const [Loc, setLoc] = useState('');
+
+  const onChange = useCallback((e) => {
+    setLoc(e.currentTarget.value);
+  }, []);
+
+  const onClick = useCallback(() => {
+    setLoc('');
+  }, []);
+
   return (
     <Container>
       <Header
@@ -16,7 +27,14 @@ export default function SetLoc() {
 
       <Form>
         <Label label="위치설정" description="" stress="" />
-        <Input />
+
+        <Input
+          value={Loc}
+          onChange={onChange}
+          type="text"
+          loc={true}
+          onClick={onClick}
+        />
 
         <ButtonContainer prev={true} disable={false} />
 

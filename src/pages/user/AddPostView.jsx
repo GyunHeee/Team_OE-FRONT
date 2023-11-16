@@ -44,7 +44,7 @@ const DropdownItem = styled.li`
   border-bottom: 1px solid #eeeeee;
 
   &:hover {
-    background-color: #f9f9f9;
+    background-color: #eeeeee;
   }
 `;
 

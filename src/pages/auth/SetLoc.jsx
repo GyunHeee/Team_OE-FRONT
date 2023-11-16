@@ -8,7 +8,7 @@ import ButtonContainer from './components/ButtonContainer';
 import { useState, useCallback } from 'react';
 
 export default function SetLoc() {
-  const [Loc, setLoc] = useState('');
+  const [loc, setLoc] = useState('');
 
   const onChange = useCallback((e) => {
     setLoc(e.currentTarget.value);
@@ -29,7 +29,7 @@ export default function SetLoc() {
         <Label label="위치설정" description="" stress="" />
 
         <Input
-          value={Loc}
+          value={loc}
           onChange={onChange}
           type="text"
           loc={true}

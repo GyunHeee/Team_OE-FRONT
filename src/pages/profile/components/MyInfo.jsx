@@ -75,9 +75,21 @@ const SubmitButton = styled.button`
   font-size: 16px;
   border-radius: 10px;
   cursor: pointer;
+  &:disabled {
+    cursor: default;
+    opacity: 0.4;
+  }
 `;
 
-export default function MyInfo() {
+export default function MyInfo({
+  name,
+  onChangeName,
+  loc,
+  onChangeLoc,
+  checkLength,
+  onClickName,
+  onClickLoc,
+}) {
   return (
     <form>
       <ItemContainer>
@@ -92,8 +104,10 @@ export default function MyInfo() {
           type="text"
           required={true}
           placeholder="닉네임을 입력해주세요."
+          value={name}
+          onChange={onChangeName}
         />
-        <CancelButton type="button">
+        <CancelButton type="button" onClick={onClickName}>
           <img src="/icons/btn_cancel.svg" alt="취소" />
         </CancelButton>
       </ItemContainer>
@@ -109,8 +123,13 @@ export default function MyInfo() {
           <img src="/icons/icon_location_gray.svg" alt="장소" />
         </LocationButton>
 
-        <LocationInput type="text" placeholder="위치설정" />
-        <CancelButton>
+        <LocationInput
+          type="text"
+          placeholder="위치설정"
+          value={loc}
+          onChange={onChangeLoc}
+        />
+        <CancelButton type="button" onClick={onClickLoc}>
           <img src="/icons/btn_cancel.svg" alt="취소" />
         </CancelButton>
       </ItemContainer>
@@ -126,7 +145,9 @@ export default function MyInfo() {
         <BioInput placeholder="자기소개" />
       </ItemContainer>
 
-      <SubmitButton type="submit">수정완료</SubmitButton>
+      <SubmitButton type="submit" disabled={checkLength(name)}>
+        수정완료
+      </SubmitButton>
     </form>
   );
 }

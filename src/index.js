@@ -14,6 +14,7 @@ import SetName from './pages/auth/SetName';
 import SetTel from './pages/auth/SetTel';
 import SetLoc from './pages/auth/SetLoc';
 import ProfileView from './pages/profile/ProfileView';
+import ProfileModifyView from './pages/profile/ProfileModifyView';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,7 @@ const router = createBrowserRouter([
       { path: '/login/set-tel', element: <SetTel /> },
       { path: '/login/set-loc', element: <SetLoc /> },
       { path: '/profile', element: <ProfileView /> },
+      { path: '/profile/modify', element: <ProfileModifyView /> },
     ],
   },
 ]);

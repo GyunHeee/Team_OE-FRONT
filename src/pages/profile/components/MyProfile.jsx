@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const ImageContiner = styled.div`
   position: relative;
@@ -13,7 +14,7 @@ const MyImage = styled.img`
   height: 120px;
 `;
 
-const ModifyButton = styled.button`
+const ModifyButton = styled(Link)`
   position: absolute;
   bottom: 0;
   right: 0;
@@ -42,9 +43,9 @@ export default function MyProfile() {
   return (
     <>
       <ImageContiner>
-        <MyImage src="/mock/profile_basic.svg" alt="프로필 사진" />
-        <ModifyButton>
-          <img src="/icons/btn_modify.svg" alt="" />
+        <MyImage src="/mock/icon_profile.svg" alt="프로필 사진" />
+        <ModifyButton to="/profile/modify">
+          <img src="/icons/btn_modify.svg" alt="프로필 수정" />
         </ModifyButton>
       </ImageContiner>
 

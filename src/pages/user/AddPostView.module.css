@@ -6,14 +6,27 @@
 
 .title {
   margin: 0.6rem;
-  width: 358px;
-  height: 56px;
+  width: 350px;
+  height: 50px;
+  padding: 8px;
 
   border-radius: 10px;
   border: 1px solid #000000;
 }
 
+.position {
+  width: 350px;
+  height: 56px;
+
+  padding: 8px;
+
+  border-radius: 10px;
+  border: 1px solid #000000;
+  margin: 0.3rem;
+}
+
 .content {
+  margin: 0.6rem;
   width: 350px;
   height: 310px;
   border-radius: 10px;
@@ -44,9 +57,13 @@ input[type='file'] {
   line-height: 24px;
   letter-spacing: -0.5px;
   text-align: center;
+
+  margin: 0.2rem;
 }
 
 .category {
+  text-align: center;
+
   width: 104px;
   height: 40px;
 
@@ -59,10 +76,21 @@ input[type='file'] {
   font-weight: 600;
   line-height: 24px;
   letter-spacing: -0.5px;
-  text-align: center;
+
+  margin: 0.2rem;
+
+  z-index: 1;
+}
+
+.curCategory {
+  line-height: 40px;
 }
 
 .camera {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: 143px;
   height: 40px;
   padding: 8px, 8px, 8px, 16px;
@@ -77,5 +105,22 @@ input[type='file'] {
   letter-spacing: -0.5px;
   text-align: center;
 
-  line-height: 1;
+  margin: 0.2rem;
+}
+
+.submitBtn {
+  width: 358px;
+  height: 56px;
+  border-radius: 10px;
+  background: #0085ff;
+
+  color: white;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.5px;
+  text-align: center;
+
+  margin: 2.5rem;
 }

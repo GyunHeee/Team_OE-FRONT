@@ -40,8 +40,11 @@ const DropdownItem = styled.li`
   text-overflow: ellipsis;
   min-width: 80px;
 
+  background-color: white;
+  border-bottom: 1px solid #eeeeee;
+
   &:hover {
-    background-color: #f9f9f9;
+    background-color: #eeeeee;
   }
 `;
 
@@ -62,7 +65,7 @@ export default function AddPostView() {
   return (
     <form className={styles.container}>
       <input className={styles.title} type="text" placeholder="제목" />
-      <input type="text" placeholder="위치설정" />
+      <button className={styles.position}>위치설정</button>
       <textarea
         className={styles.content}
         placeholder="내용 작성"
@@ -72,9 +75,11 @@ export default function AddPostView() {
         rows="10"
       ></textarea>
       <div className={styles.etcContainer}>
-        <p className={styles.tag}>필수 태그</p>
+        <input className={styles.tag} type="text" placeholder="필수 태그" />
         <div className={styles.category}>
-          <div onClick={handleDropdownToggle}>{selectedCategory} ⌃</div>
+          <div className={styles.curCategory} onClick={handleDropdownToggle}>
+            {selectedCategory} ⌃
+          </div>
           <DropdownContent isOpen={isOpen}>
             {categories.map((category) => (
               <DropdownItem
@@ -91,7 +96,9 @@ export default function AddPostView() {
         </label>
         <input type="file" id="input-file" accept="image/*;capture=camera" />
       </div>
-      <button type="submit">올리기</button>
+      <button className={styles.submitBtn} type="submit">
+        올리기
+      </button>
     </form>
   );
 }

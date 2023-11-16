@@ -9,6 +9,7 @@ export default function KaKaoLogin() {
   useEffect(() => {
     if (code) {
       kakao(code).then((response) => {
+        console.log(response);
         response.status === 201 && navigate('/');
       });
     }

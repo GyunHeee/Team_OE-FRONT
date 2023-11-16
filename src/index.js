@@ -12,6 +12,7 @@ import LoginView from './pages/auth/LoginView';
 import KaKaoLogin from './pages/auth/KaKaoLogin';
 import SetName from './pages/auth/SetName';
 import SetTel from './pages/auth/SetTel';
+import SetLoc from './pages/auth/SetLoc';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,7 @@ const router = createBrowserRouter([
       { path: '/login/kakao', element: <KaKaoLogin /> },
       { path: '/login/set-name', element: <SetName /> },
       { path: '/login/set-tel', element: <SetTel /> },
+      { path: '/login/set-loc', element: <SetLoc /> },
     ],
   },
 ]);

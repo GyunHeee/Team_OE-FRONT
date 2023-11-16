@@ -20,13 +20,14 @@ const CancelButton = styled.button`
   position: absolute;
   top: 27px;
   right: 0;
+  cursor: pointer;
 `;
 
 export default function Input() {
   return (
     <InputContainer>
       <InputComponent type="text" id="input" />
-      <CancelButton>
+      <CancelButton type="button">
         <img src="/icons/btn_cancel.svg" alt="취소" />
       </CancelButton>
     </InputContainer>

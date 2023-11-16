@@ -2,8 +2,8 @@ import Container from './components/Container';
 import Header from './components/Header';
 import Form from './components/Form';
 import Label from './components/Label';
-import Button from './components/Button';
 import Input from './components/Input';
+import ButtonContainer from './components/ButtonContainer';
 
 export default function SetName() {
   return (
@@ -15,7 +15,7 @@ export default function SetName() {
 
         <Input />
 
-        <Button>다음</Button>
+        <ButtonContainer prev={false} disable={true} />
       </Form>
     </Container>
   );

@@ -10,6 +10,6 @@ const NextButtonComponent = styled.button`
   border-radius: 10px;
 `;
 
-export default function Button() {
+export default function NextButton() {
   return <NextButtonComponent type="submit">다음</NextButtonComponent>;
 }

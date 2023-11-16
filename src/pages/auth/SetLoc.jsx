@@ -6,13 +6,16 @@ import Input from './components/Input';
 import SkipButton from './components/SkipButton';
 import ButtonContainer from './components/ButtonContainer';
 
-export default function SetTel() {
+export default function SetLoc() {
   return (
     <Container>
-      <Header title="전화번호" description="전화번호를 입력해주세요." />
+      <Header
+        title="위치"
+        description="위치를 설정해주세요. 해당지역의 사건사고를 빠르게 알려드립니다!"
+      />
 
       <Form>
-        <Label label="전화번호" description="- 빼고 작성" stress="" />
+        <Label label="위치설정" description="" stress="" />
         <Input />
 
         <ButtonContainer prev={true} disable={false} />

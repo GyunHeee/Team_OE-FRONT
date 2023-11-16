@@ -40,11 +40,6 @@ const LocationInput = styled(Input)`
   width: 290px;
 `;
 
-const DateInput = styled(Input)`
-  padding-right: 16px;
-  width: 326px;
-`;
-
 const CancelButton = styled.button`
   position: absolute;
   top: 35px;
@@ -106,20 +101,6 @@ export default function MyInfo() {
       <ItemContainer>
         <LabelContainer>
           <label>
-            <span>전화번호 </span>
-          </label>
-          <GraySpan>- 빼고 작성</GraySpan>
-        </LabelContainer>
-
-        <Input type="tel" placeholder="전화번호를 입력해주세요." />
-        <CancelButton>
-          <img src="/icons/btn_cancel.svg" alt="취소" />
-        </CancelButton>
-      </ItemContainer>
-
-      <ItemContainer>
-        <LabelContainer>
-          <label>
             <span>위치설정 </span>
           </label>
         </LabelContainer>
@@ -132,16 +113,6 @@ export default function MyInfo() {
         <CancelButton>
           <img src="/icons/btn_cancel.svg" alt="취소" />
         </CancelButton>
-      </ItemContainer>
-
-      <ItemContainer>
-        <LabelContainer>
-          <label>
-            <span>생일 </span>
-          </label>
-        </LabelContainer>
-
-        <DateInput type="date" />
       </ItemContainer>
 
       <ItemContainer>

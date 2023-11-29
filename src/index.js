@@ -16,6 +16,7 @@ import SetLoc from './pages/auth/SetLoc';
 import ProfileView from './pages/profile/ProfileView';
 import ProfileModifyView from './pages/profile/ProfileModifyView';
 import AddPostView from './pages/user/AddPostView';
+import SearchView from './pages/SearchView';
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,7 @@ const router = createBrowserRouter([
       { path: '/profile', element: <ProfileView /> },
       { path: '/profile/modify', element: <ProfileModifyView /> },
       { path: '/addPost', element: <AddPostView /> },
+      { path: '/search/:user_id', element: <SearchView /> },
     ],
   },
 ]);

@@ -45,3 +45,7 @@ button {
 .content {
   min-height: calc(100vh - 49px);
 }
+
+li {
+  list-style: none;
+}

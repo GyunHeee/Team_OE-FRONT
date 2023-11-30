@@ -18,6 +18,7 @@ import ProfileModifyView from './pages/profile/ProfileModifyView';
 import AddPostView from './pages/user/AddPostView';
 import SearchView from './pages/SearchView';
 import UserCommentView from './pages/user/UserCommentView';
+import MapView from './pages/map/MapView';
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,7 @@ const router = createBrowserRouter([
       { path: '/addPost', element: <AddPostView /> },
       { path: '/search/:user_id', element: <SearchView /> },
       { path: '/user/comment/:user_id', element: <UserCommentView /> },
+      { path: '/map', element: <MapView /> },
     ],
   },
 ]);

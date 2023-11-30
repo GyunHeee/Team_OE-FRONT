@@ -48,6 +48,9 @@ const AuthList = styled.ul`
 
 const AuthLi = styled.li`
   list-style-type: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
 `;
 
 const AuthItem = styled(Link)`

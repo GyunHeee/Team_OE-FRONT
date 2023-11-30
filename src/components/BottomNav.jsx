@@ -27,11 +27,8 @@ const PreventOverflow = styled.div`
 
 const NavContainer = styled.nav`
   display: flex;
-
   width: 100%;
-  height: 49px;
-  font-size: 12px;
-  font-weight: 600;
+  height: 60px;
   box-shadow: 0px 15px 30px 30px rgb(0 0 0 / 0.05);
   background-color: white;
 `;
@@ -45,8 +42,13 @@ const NavList = styled.ul`
 `;
 
 const NavLi = styled.li`
-  list-style-type: none;
-  width: 40px;
+  list-style: none;
+  width: 50px;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
 `;
 
 const ItemContainerClicked = styled(Link)`
@@ -54,7 +56,6 @@ const ItemContainerClicked = styled(Link)`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 4px;
   width: 100%;
   height: 100%;
   text-decoration: none;
@@ -68,7 +69,6 @@ const ItemContainerUnClicked = styled(Link)`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 4px;
   width: 100%;
   height: 100%;
   text-decoration: none;

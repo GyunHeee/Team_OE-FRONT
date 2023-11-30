@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { kakao } from '../../api/auth';
+import { getToken } from '../../lib/handleToken';
 
 export default function KaKaoLogin() {
   const navigate = useNavigate();
@@ -9,8 +10,7 @@ export default function KaKaoLogin() {
   useEffect(() => {
     if (code) {
       kakao(code).then((response) => {
-        console.log(response);
-        response.status === 201 && navigate('/');
+        getToken('accessToken') && navigate('/');
       });
     }
   }, [code, navigate]);

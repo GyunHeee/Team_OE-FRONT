@@ -42,8 +42,9 @@ button {
   border: none;
 }
 
-.content {
-  min-height: calc(100vh - 49px);
+.content,
+.not-found {
+  min-height: calc(100vh - 60px);
 }
 
 li {

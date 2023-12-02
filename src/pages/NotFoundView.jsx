@@ -7,7 +7,7 @@ export default function NotFoundView() {
 
   return (
     <>
-      <div>Not found</div>
+      <div className="not-found">Not found</div>
       {pathname.startsWith('/login') || <BottomNav />}
     </>
   );

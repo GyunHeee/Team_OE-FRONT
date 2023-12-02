@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 const ImageContiner = styled.div`
   position: relative;
-  margin-top: 60px;
-  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 `;
 
 const MyImage = styled.img`
